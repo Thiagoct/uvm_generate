@@ -13,6 +13,7 @@ Arquivos RTL a serem testados.
 tb:
 
 Todos os arquivos referentes ao ambiente de verificação.
+O arquivo xxx_if.sv da interface deve ser alterado 
 
 workspace:
 
