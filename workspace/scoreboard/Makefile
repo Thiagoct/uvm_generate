@@ -166,4 +166,25 @@ refmod:
 	@echo "      end" >> ../../tb/refmod.sv
 	@echo "   endtask // record_tr" >> ../../tb/refmod.sv	 
 	@echo " " >> ../../tb/refmod.sv
-	@echo "endclass // refmod" >> ../../tb/refmod.sv		
+	@echo "endclass // refmod" >> ../../tb/refmod.sv
+
+
+ref_transaction:
+	@echo "class ref_transaction extends uvm_sequence_item;" >> ../../tb/ref_transaction.sv
+	@echo " " >> ../../tb/ref_transaction.sv
+	#--------------------------------------definir aqui os sinais de saida do refmod---------------
+	
+
+	#----------------------------------------------------------------------------------------------
+	@echo " " >> ../../tb/ref_transaction.sv	
+	@echo "function new (string name = \"ref_transaction\");" >> ../../tb/ref_transaction.sv
+	@echo "super.new(name);" >> ../../tb/ref_transaction.sv
+	@echo "endfunction // new" >> ../../tb/ref_transaction.sv
+	@echo " " >> ../../tb/ref_transaction.sv
+	@echo "\`uvm_object_param_utils_begin(ref_transaction)" >> ../../tb/ref_transaction.sv
+	#--------------------------------------alterar aqui-------------------------------------------- 
+	#exemplo @echo "\`uvm_field_int(data_out, UVM_UNSIGNED)" >> ../../tb/ref_transaction.sv
+	#----------------------------------------------------------------------------------------------
+	@echo "\`uvm_object_utils_end" >> ../../tb/ref_transaction.sv
+	@echo " " >> ../../tb/ref_transaction.sv
+	@echo "endclass // ref_transaction"	>> ../../tb/ref_transaction.sv	
